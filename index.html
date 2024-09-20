@@ -4,13 +4,13 @@
         <style>
             body {
                 font-family: Arial, Helvetica, sans-serif;
-                margin: 0;
-                padding: 0;
+                margin: 10 px;
+                padding: 5 px;
                 box-sizing: border-box;
             }
 
             header {
-                background-color: rgb(188, 197, 204);
+                background-color: rgb(167, 177, 185);
                 color: black;
                 padding: 20px;
                 text-align: center;
@@ -38,12 +38,57 @@
                 background-color: lightgray;
 
             }
+            .column {
+                float: left;
+                width: 33.33%;
+                padding: 5 px;
+              
+                        
+            }
 
+            .row::after {
+                content: "";
+                clear: both;
+                display: table;
+            }
+
+            .row{
+                display: flex;
+
+            }
+
+            .button {
+                border: 5 px solid lavender;
+                color: darkslategray;
+                padding: 15px 32px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+                margin: 4px 2px;
+                cursor: pointer;
+            }
+
+            h1:hover {
+                background-color: lightslategray
+            }
+
+            button:hover {
+                color: darkgray
+            }
+
+            a:hover {
+                background-color: azure;
+            }
+
+            img {
+                border: 20px solid rgb(217, 217, 219);
+            }
         </style>
     </head>
-    <body>
+    <body style="background-color: rgb(238, 241, 241)">
         <header>
-            <h1>Nosaukums</h1>
+            <h1>Gaming</h1>
             <nav>
                 <a href = "#">Home</a>
                 <a href = "#">About</a>
@@ -51,22 +96,35 @@
             </nav>
         </header>
         <main>
-            <div>
-                <h1>H1 virsraksts</h1>
-                <h2>H2 virsraksts</h2>
-                <p>Welcome</p>
-                <img src = "C:\Users\ab00053\Downloads\gaming.jpg" alt = "Gamer" width = "700" height="300">
-            </div>
+            <div class="row">
+                <div class="column">
+                    <figure>
+                        <img src="C:\Users\ab00053\Downloads\pc_gaming.jpg" alt="Computer gaming" style="width:100%">
+                        <figcaption>Computer gaming</figcaption>
+                        <button class = "button">Join</button>
+                    </figure>
+                </div>
+                <div class="column">
+                    <figure>
+                        <img src="C:\Users\ab00053\Downloads\console_gaming.jpg" alt="Console gaming" style="width:100%">
+                        <figcaption>Console gaming</figcaption>
+                        <button class = "button">Join</button>
+                    </figure>
+                </div>
+                <div class="column">
+                  <figure>
+                    <img src="C:\Users\ab00053\Downloads\mobile_gaming.jpeg" alt="Mobile gaming" style="width:70%">
+                    <figcaption>Mobile gaming</figcaption>
+                    <button class = "button">Join</button>
+                  </figure>
+                </div>
+              </div>
+              
 
-            <div>
-                <h1>H1 virsraksts</h1>
-                <h2>H2 virsraksts</h2>
-                <p>Welcome</p>
-                <img src = "C:\Users\ab00053\Downloads\gaming.jpg" alt = "Gamer" width = "700" height="300">
-            </div>
+        
 
             <aside>
-                <h3>Saistītie raksti</h3>
+                <h3>Other</h3>
                 <ul>
                     <li><a href="#">1</a></li>
                     <li><a href="#">2</a></li>
@@ -75,4 +133,3 @@
             </aside>
         </main>
     </body>
-        
