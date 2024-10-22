@@ -25,21 +25,25 @@
                     <figure>
                         <img src="C:\Users\ab00053\Downloads\pc_gaming.jpg" alt="Computer gaming" style="width:100%">
                         <figcaption>Computer gaming</figcaption>
-                        <button class = "button">Join</button>
+                        <button class="button" onclick="showText(1)">Join</button>
+                        <p id="text1" style="display:none;">You have joined the Computer Gaming community!</p>
+                    </figure>
                     </figure>
                 </div>
                 <div class="column">
                     <figure>
                         <img src="C:\Users\ab00053\Downloads\console_gaming.jpg" alt="Console gaming" style="width:100%">
                         <figcaption>Console gaming</figcaption>
-                        <button class = "button">Join</button>
+                        <button class="button" onclick="showText(2)">Join</button>
+                        <p id="text2" style="display:none;">You have joined the Console Gaming community!</p>
                     </figure>
                 </div>
                 <div class="column">
                   <figure>
                     <img src="C:\Users\ab00053\Downloads\mobile_gaming.jpeg" alt="Mobile gaming" style="width:70%">
                     <figcaption>Mobile gaming</figcaption>
-                    <button class = "button">Join</button>
+                    <button class="button" onclick="showText(3)">Join</button>
+                    <p id="text3" style="display:none;">You have joined the Mobile Gaming community!</p>
                   </figure>
                 </div>
               </div>
@@ -61,6 +65,15 @@
                 function toggleDarkMode() {
                     document.body.classList.toggle('dark-mode');
                  }
+
+                 function showText(id) {
+                    var text = document.getElementById("text" + id);
+                    if (text.style.display === "none") {
+                        text.style.display = "block";
+                    } else {
+                        text.style.display = "none";
+                    }
+                }
             </script>
             
         </main>
@@ -263,6 +276,12 @@
 
             .button:hover {
                 background-image: linear-gradient(to right, #d59aec, #c897f0);
+            }
+
+            body.dark-mode .button:hover {
+                background-image: linear-gradient(to right, #1c4672, #1a216c);
+                
+                
             }
 
             .dropdown {
